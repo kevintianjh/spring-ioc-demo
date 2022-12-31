@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class Student {
 	private int id;
 	private String name;
-	private Address address;
+	@Autowired private Address address;
 	@Autowired  private List<Hobby> hobbies;
 	
 	public Student() {}

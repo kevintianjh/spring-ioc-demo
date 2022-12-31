@@ -35,9 +35,9 @@ public class Launch1 {
 		
 		System.out.println();
 		
-		/* Prototype Student bean, with a List<Hobby> injected using
-		 * @Autowired. List<Hobby> bean is defined inside
-		 * Config.java
+		/* Prototype Student bean, with Address and List<Hobby> objects injected using
+		 * @Autowired. Address bean is defined using @Component and List<Hobby> bean 
+		 * is defined inside Config.java. 
 		 */ 
 		Student student1 = ac.getBean(Student.class);
 		Student student2 = ac.getBean(Student.class);  
