@@ -8,4 +8,4 @@ Assignment 1 is a simple demonstration of my understanding of spring IOC concept
 
 <b>Assignment #2</b>
 <br>
-Assignment 2 is restructuring of a simple game (week #1 assignment) using spring IOC. The game works with Guesser object randomly produces a number from 1 to 10, and the 3 Player objects will prompt input from user and lastly the Umpire object will announce which Player(s) won the game
+Assignment 2 is restructuring of a simple game (week #1 assignment) with spring IOC design. The game works with Guesser object randomly produces a number from 1 to 10, and the 3 Player objects will prompt input from user and lastly the Umpire object will announce which Player(s) won the game
