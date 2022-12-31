@@ -5,7 +5,7 @@
 Assignment 1 is a simple demostration of understanding of spring IOC concept. Launch 1 is demostrated using annotations, Launch2 is demostrated using the
 assignment_1.xml
 
-<br><br>
+<br>
 
 <b>Assignment #2</b>
 <br>
