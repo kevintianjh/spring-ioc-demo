@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<!-- Singleton object for DB Connection -->
+	<bean id="dbConnection" class="assignment_1.DummyConnection"> 
+	</bean>
+	
+	<!-- Inject using constructor -->
+	<bean id="carDB" class="assignment_1.CarDB">
+		<constructor-arg index="0" ref="dbConnection" />
+	</bean> 
+	
+	<!-- Inject using setter -->
+	<bean id="studentDB" class="assignment_1.StudentDB">
+		<property name="connection" ref="dbConnection"></property>
+	</bean> 
+	
+	<bean id="hobby1" class="assignment_1.Hobby" scope="prototype">
+		<property name="name" value="Running"></property>
+	</bean>
+	
+	<bean id="hobby2" class="assignment_1.Hobby" scope="prototype">
+		<property name="name" value="Swimming"></property>
+	</bean>
+	
+	<!-- Prototype object of Student, all students must got default 
+	     2 hobbies of running and swimming -->
+	<bean id="student" class="assignment_1.Student" scope="prototype">
+		<property name="hobbies">
+			<list>
+				<ref bean="hobby1"></ref>
+				<ref bean="hobby2"></ref>
+			</list>
+		</property>
+	</bean>
+	 
+</beans>
